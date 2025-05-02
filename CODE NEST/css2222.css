@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(ellipse at bottom, #0d0d2b, #000);
+  color: #e0e0ff;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+/* Estrellas animadas */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, #fff, transparent),
+    radial-gradient(1px 1px at 70% 80%, #fff, transparent),
+    radial-gradient(1px 1px at 50% 50%, #fff, transparent);
+  z-index: -1;
+  opacity: 0.15;
+  animation: galaxia 80s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes galaxia {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100px, -100px); }
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #4b0082, #8a2be2, #00ffff);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 20px rgba(138, 43, 226, 0.5);
+}
+
+/* Contenedor */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Caja de contenido */
+.content-box {
+  background: rgba(30, 30, 60, 0.95);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 255, 255, 0.15);
+  margin-bottom: 40px;
+}
+
+.content-box h1 {
+  color: #00ffff;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.content-box .intro {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Caja del formulario */
+.form-box {
+  background: rgba(40, 40, 80, 0.95);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(138, 43, 226, 0.3);
+}
+
+.form-box h2 {
+  color: #00ffff;
+  margin-bottom: 15px;
+}
+
+.form-box label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.form-box input,
+.form-box textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #111;
+  color: #eee;
+}
+
+.form-box button {
+  background-color: #8a2be2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-box button:hover {
+  background-color: #4b0082;
+}

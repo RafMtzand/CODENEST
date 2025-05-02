@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(90deg,
+      #ff0000,
+      #ffff00,
+      #ff00f3,
+      #0033ff,
+      #ff00c4,
+      #ff0000);
+    background-size: 400%;
+    animation: fondoAnimado 20s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  @keyframes fondoAnimado {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+  }
+.contact-wrapper {
+  width: 100%;
+  max-width: 650px;
+  animation: slideFade 1s ease;
+}
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contact-card {
+  background: lightgray;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+.contact-card h2 {
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+.contact-card p {
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  color: #000;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-field label {
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  display: block;
+  color: #000;
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fdfdfd;
+  transition: all 0.3s ease;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #4e54c8;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(78, 84, 200, 0.15);
+}
+button {
+  background: linear-gradient(to right, #4e54c8, #2696E9);
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+button:hover {
+  background: linear-gradient(to right, #101262, #01151d);
+}

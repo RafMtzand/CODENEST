@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram - CodeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0b0f2a, #1c1b40);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(1px 1px at 25% 40%, #ffffff44, transparent),
+                        radial-gradient(1px 1px at 70% 80%, #ffffff33, transparent),
+                        radial-gradient(1px 1px at 50% 20%, #ffffff22, transparent);
+      z-index: -1;
+      animation: galaxia 100s linear infinite;
+      opacity: 0.1;
+    }
+
+    @keyframes galaxia {
+      from { transform: translate(0, 0); }
+      to { transform: translate(-100px, -100px); }
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #00eaff;
+      text-align: center;
+      text-shadow: 0 0 10px rgba(0, 234, 255, 0.3);
+    }
+
+    .card-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px 20px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 234, 255, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 40px rgba(0, 234, 255, 0.25);
+    }
+
+    .card i {
+      font-size: 2.5rem;
+      color: #e1306c;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      color: #aad8ff;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #8a2be2;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .card a:hover {
+      background: #5f1da6;
+    }
+
+    @media (max-width: 600px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    h1{
+    background: linear-gradient(90deg,
+    #ff0000,
+    #ffff00,
+    #ff00f3,
+    #0033ff,
+    #ff00c4,
+    #ff0000
+    );
+    background-size: 400%;
+    
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate {
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+  </style>
+</head>
+<body>
+  <h1>Encuéntranos en Instagram</h1>
+  <div class="card-container">
+    <div class="card">
+      <i class="fab fa-instagram"></i>
+      <h2>@ian__rvs</h2>
+      <p>Creador de CodeNest y entusiasta de la programación creativa.</p>
+      <a href="https://www.instagram.com/ian__rvs?igsh=eGx4YndyM2ludWg1" target="_blank">Ver perfil</a>
+    </div>
+    <div class="card">
+      <i class="fab fa-instagram"></i>
+      <h2>@raf_mtzand</h2>
+      <p>Colaborador de recursos visuales y cofundador de la visión CodeNest.</p>
+      <a href="https://www.instagram.com/raf_mtzand?igsh=aWp0Zmh3cmFmcmFk" target="_blank">Ver perfil</a>
+    </div>
+  </div>
+</body>
+</html>
